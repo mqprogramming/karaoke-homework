@@ -77,4 +77,12 @@ class KaraokeTest < MiniTest::Test
     assert_equal(10, @guest1.cash())
   end
 
+  def test_guests_fav_song_on_playlist__found()
+    assert_equal("Yaaaaas gurl!", @room_a.guests_fav_song_on_playlist(@guest1))
+  end
+
+  def test_guests_fav_song_on_playlist__not_found()
+    assert_nil(@room_a.guests_fav_song_on_playlist(@guest4))
+  end
+
 end

@@ -24,4 +24,12 @@ class Room
     @songs.push(song)
   end
 
+  def guests_fav_song_on_playlist(guest)
+    found_song = @songs.find() do |song|
+      song.name == guest.fav_song
+    end
+
+    return "Yaaaaas gurl!" if found_song != nil
+  end
+
 end
